@@ -1,75 +1,51 @@
-# Nuxt 3 Minimal Starter
 
-Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+<!-- Title -->
+<h1 align="center">
+   Country Holidays
+</h1>
 
-## Setup
+<!-- Header -->
 
-Make sure to install the dependencies:
+<p align="center">
+  <b>Test task using Nuxt3</b>
+  <br />
+</p>
 
-```bash
-# npm
+<p align="center">
+  <p>In this task, you can view the upcoming holidays for 3 random countries, navigate to the selected country from the list or use the search</p>
+  <br />
+</p>
+
+<!-- Body -->
+
+Clone the repository using the command:
+```sh
+git clone https://github.com/AntonMartynes/developsTodayTask.git
+```
+
+Go to the project directory using the command:
+```sh
+cd developsTodayTask
+```
+## Running  Vue application
+
+Create an .env file in the root directory with the following variable:  
+```sh
+BASE_URL=https://date.nager.at/api/v3
+```
+Install the dependencies using the command: 
+```sh
 npm install
-
-# pnpm
-pnpm install
-
-# yarn
-yarn install
-
-# bun
-bun install
 ```
-
-## Development Server
-
-Start the development server on `http://localhost:3000`:
-
-```bash
-# npm
+Start Vue application
+```sh
 npm run dev
-
-# pnpm
-pnpm run dev
-
-# yarn
-yarn dev
-
-# bun
-bun run dev
 ```
-
-## Production
-
-Build the application for production:
-
-```bash
-# npm
-npm run build
-
-# pnpm
-pnpm run build
-
-# yarn
-yarn build
-
-# bun
-bun run build
-```
-
-Locally preview production build:
-
-```bash
-# npm
-npm run preview
-
-# pnpm
-pnpm run preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+## Technologies used
+The project uses the following technologies:
+ - Nuxt3
+ - TypeScript
+ - Quasar
+ - HTML
+ - CSS/SASS
+ - Flexbox
