@@ -1,0 +1,46 @@
+@import "quasar.variables";
+@import "quasar/src/css/flex-addon"; // cssAddon from quasar to use q-pa-md-xl q-ma-md-xl etc
+
+@import "_typography";
+@import "_button";
+@import "_select";
+@import "_input";
+@import "_link";
+@import "_card";
+@import "_page";
+@import "_container";
+@import "_custom-utility-classes";
+
+html, body {
+  overflow-x: hidden;
+}
+
+html, body {
+  overflow-x: hidden;
+}
+
+.beauty-scroll,
+* {
+  &::-webkit-scrollbar {
+    width: 7px;
+    height: 7px;
+  }
+  &::-webkit-scrollbar-track {
+    background: var(--color-scrollbar-track);
+    border-radius: 11px;
+  }
+  &::-webkit-scrollbar-thumb {
+    background: var(--color-scrollbar-thumb);
+    border-radius: 11px;
+  }
+}
+
+.notification:first-child {
+  margin-top: 68px;
+}
+
+@media (max-width: 500px) {
+  .no-scroll {
+    overflow: hidden !important;
+  }
+}

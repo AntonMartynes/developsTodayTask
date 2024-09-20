@@ -1,0 +1,67 @@
+$gap-base: 4px;
+$radius-base: 4px;
+
+$gaps: (
+  "none": 0,
+  "xs": $gap-base, // 4px
+  "xs2": $radius-base * 1.5, // 6px
+  "sm": $gap-base * 2, // 8px
+  "sm2": $gap-base * 3, // 12px
+  "md": $gap-base * 4, // 16px
+  "lg": $gap-base * 6, // 24px
+  "xl": $gap-base * 8, // 32px
+  "2xl": $gap-base * 10, // 40px
+  "3xl": $gap-base * 12, // 48px
+
+) !default;
+
+@each $gap-name, $gap-size  in $gaps {
+  .gap-#{$gap-name} {
+    gap: $gap-size;
+  }
+
+  .gap-x-#{$gap-name} {
+    row-gap: $gap-size;
+  }
+
+  .gap-y-#{$gap-name} {
+    column-gap: $gap-size;
+  }
+}
+
+$radiuses: (
+  "none": 0,
+  "xs": $radius-base, // 4px
+  "sm": $radius-base * 2, // 8px
+  "md": $radius-base * 3, // 12px
+  "lg": $radius-base * 4, // 16px
+  "xl": $radius-base * 5, // 20px
+  "full": 9999px
+) !default;
+
+@each $radius-name, $radius-size in $radiuses {
+  .rounded-#{$radius-name} {
+    border-radius: $radius-size;
+  }
+}
+
+.flex-1 {
+  flex: 1;
+}
+
+$borders: top, right, bottom, left;
+
+
+@each  $border in $borders {
+  .border-#{$border}-stroke {
+    border-#{$border}: 1px solid var(--color-stroke) ;
+  }
+}
+
+.border-stroke {
+  border: 1px solid var(--color-stroke);
+}
+
+.fit-content {
+  width: fit-content;
+}

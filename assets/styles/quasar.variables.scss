@@ -1,0 +1,270 @@
+// src/css/quasar.variables.scss
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap");
+
+$body-font-family: "Ubuntu" !default;
+$font-size-root: 16px;
+
+// Font size
+$font-size-button-name: 0.875rem !default;
+$font-size-sidebar: 18px !default;
+$font-size-paragraph: 14px !default;
+$font-size-small: 12px !default;
+$font-size-card-h2: 1.5rem !default;
+$font-size-h1: 2rem;
+$font-size-h2: 2rem !default;
+$font-size-h3: 1.5625rem;
+$font-size-h4: 1.125rem !default;
+$font-size-h5: 1.0625rem !default;
+$font-size-h6: 0.75rem !default;
+
+// Font Weight
+$font-weight-light: 300 !default;
+$font-weight-lighter: 400 !default;
+$font-weight-bolder: 500 !default;
+$font-weight-600: 600 !default;
+$font-weight-700: 700 !default;
+$font-weight-800: 800 !default;
+$font-weight-900: 900 !default;
+
+// Line Height
+$line-height: 30px !default;
+$line-height-base: 135% !default;
+$line-height-footer-items: 1.8rem !default;
+$line-height-higher: 22px !default;
+$line-height-high: 56px !default;
+$line-height-chapter: 2.5rem !default;
+$line-height-p: 1.625rem !default;
+$line-height-descript: 1.5rem !default;
+
+//  Buttons
+$btn-line-height: 1.375rem !default;
+$button-border-radius: 4px !default;
+// $btn-icon-dim: 41px !default;
+// $btn-y-large-padding: 1.125rem !default;
+// $btn-x-large-padding: 2.25rem !default;
+// $btn-large-line-height: 1.333333 !default;
+// $btn-y-small-padding: 0.40625rem !default;
+// $btn-x-small-padding: 1.25rem !default;
+// $btn-round-padding: 30px !default;
+// $btn-font-size-icon: 1.25rem !default;
+// $btn-margin-icon: 7px !default;
+// $btn-fixed-icon-size: 1.8rem !default;
+// $btn-fixed-width: 64px !default;
+
+// Sidebar List Items
+$padding-main: 32px !default;
+$padding-main-mobile: 24px 16px !default;
+$padding-small: 4px !default;
+$padding-general: 8px !default;
+
+// Tooltips
+$tooltip-min-width: 130px !default;
+$tooltip-max-width: 200px !default;
+$tooltip-border: 5px !default;
+$tooltip-top-border-pos: 16px !default;
+$tooltip-arrow-align: 0.255em !default;
+
+// Sidebar List Items
+$margin-general: 0;
+$margin-small: $padding-general;
+
+// Change default Quasar spacing variables
+$space-base: 16px !default;
+$space-x-base: $space-base !default;
+$space-y-base: $space-base !default;
+
+$space-none: (
+  x: 0,
+  y: 0,
+) !default;
+$space-xs: (
+  x: (
+    $space-x-base * 0.25,
+  ),
+  y: (
+    $space-y-base * 0.25,
+  ),
+) !default;
+$space-sm: (
+  x: (
+    $space-x-base * 0.5,
+  ),
+  y: (
+    $space-y-base * 0.5,
+  ),
+) !default;
+$space-md: (
+  x: $space-x-base,
+  y: $space-y-base,
+) !default;
+$space-lg: (
+  x: (
+    $space-x-base * 1.5,
+  ),
+  y: (
+    $space-y-base * 1.5,
+  ),
+) !default;
+$space-xl: (
+  x: (
+    $space-x-base * 2,
+  ),
+  y: (
+    $space-y-base * 2,
+  ),
+) !default;
+
+// sorry for long line; we need .sass and it doesn't support multi-line list
+$spaces: (
+  "none": $space-none,
+  "xs": $space-xs,
+  "sm": $space-sm,
+  "md": $space-md,
+  "lg": $space-lg,
+  "xl": $space-xl,
+) !default;
+
+// Change default Quasar font settings
+$h1: (
+  size: 2rem,
+  line-height: 2.5rem,
+  weight: 400,
+) !default; // 32px
+$h2: (
+  size: 3.75rem,
+  line-height: 3.75rem,
+  letter-spacing: -0.00833em,
+  weight: 300,
+) !default; // 60px
+$h3: (
+  size: 3rem,
+  line-height: 3.125rem,
+  letter-spacing: normal,
+  weight: 400,
+) !default; // 48px
+$h4: (
+  size: 2rem,
+  line-height: 2.5rem,
+  weight: 400,
+) !default; // 32px
+$h5: (
+  size: 1.5rem,
+  line-height: 2rem,
+  letter-spacing: normal,
+  weight: 400,
+) !default; // 24px
+$h6: (
+  size: 1.125rem,
+  line-height: 1.5rem,
+  weight: 400,
+) !default; // 18px
+
+$subtitle1: (
+  size: 1rem,
+  line-height: 1.75rem,
+  letter-spacing: 0.00937em,
+  weight: 400,
+) !default; // 16px line-height: 1.75rem
+$subtitle2: (
+  size: 1.75rem,
+  line-height: 32.17px,
+  weight: 400,
+) !default; // 28px weight: 400
+$subtitle3: (
+  size: 1.75rem,
+  line-height: 36px,
+  weight: 400,
+) !default; // 28px weight: 400
+
+
+$subtitle4: (
+  size: 14px,
+  line-height: 18px,
+  weight: 300,
+) !default; // 20px weight: 400
+
+$cardtitle: (
+  size: 20px,
+  line-height: 28px,
+  weight: 400,
+) !default; // 20px weight: 400
+
+$cardsubtitle: (
+  size: 18px,
+  line-height: 26px,
+  weight: 400,
+) !default; // 18px weight: 400
+
+$btntext: (
+  size: 12px,
+  line-height: 20px,
+  weight: 500,
+) !default; // 18px weight: 400
+
+
+$body1: (
+  size: 1rem,
+  line-height: 1.5rem,
+  weight: 500,
+) !default; // 16px line-height: 1.5rem
+$body2: (
+  size: 0.875rem,
+  line-height: 1.25rem,
+  letter-spacing: 0.01786em,
+  weight: 400,
+) !default; // 14px weight: 400
+
+$overline: (
+  size: 0.75rem,
+  line-height: 1.25rem,
+  weight: 500,
+) !default; // 12px weight: 500
+
+$caption: (
+  size: 0.75rem,
+  line-height: 1.25rem,
+  weight: 400,
+) !default; // 12px weight: 400
+$headings: (
+  "h1": $h1,
+  "h2": $h2,
+  "h3": $h3,
+  "h4": $h4,
+  "h5": $h5,
+  "h6": $h6,
+  "subtitle1": $subtitle1,
+  "subtitle2": $subtitle2,
+  "subtitle3": $subtitle3,
+  "subtitle4": $subtitle4,
+  "body1": $body1,
+  "body2": $body2,
+  "overline": $overline,
+  "caption": $caption,
+  "cardtitle": $cardtitle,
+  "cardsubtitle": $cardsubtitle,
+  "btntext": $btntext,
+) !default;
+$h-tags: (
+  h1: map-get($headings, "h1"),
+  h2: map-get($headings, "h2"),
+  h3: map-get($headings, "h3"),
+  h4: map-get($headings, "h4"),
+  h5: map-get($headings, "h5"),
+  h6: map-get($headings, "h6"),
+) !default;
+$text-weights: (
+  thin: 100,
+  light: 300,
+  regular: 400,
+  medium: 500,
+  bold: 700,
+  bolder: 900,
+) !default;
+
+.regular {
+  font-weight: $font-weight-lighter;
+}
+
+.light {
+  font-weight: $font-weight-light;
+}

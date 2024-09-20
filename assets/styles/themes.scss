@@ -1,0 +1,375 @@
+@use "sass:map";
+
+$themes: (
+  "light": (
+    // amabit design colors
+    color-black: #000000,
+    color-white: #FFFFFF,
+    color-main: #0085ff,
+    color-main-hover: #4187ff,
+    color-main-shadow: rgba(0, 133, 255, 0.4),
+    color-text-gray: #a7a7a7,
+    color-text-dark-gray: #5c5c5c,
+    color-text-dark-gray-1: #5c5c5c,
+    color-text-dark-gray-2: #5c5c5c,
+    color-text-dark-gray-3: #959595,
+    color-text-light-gray: #d2d2d2,
+    color-text-light-gray-2: #5c5c5c,
+    color-text-white: #0d0d0d,
+    color-text-white-1: #ffffff,
+    color-text-white-2: #0d0d0d,
+    color-text-white-3: #0d0d0d,
+
+    color-text-1: #0d0d0d,
+    color-text-2: #dbdbdb,
+    color-text-4: #7d8594,
+
+    // amabit design colors that contains bg should be consistent
+    color-bg-3: #cccccc,
+    color-bg-4: #f9f9f9,
+    color-bg-5: #f8f8f8,
+    color-bg-6: #ccc,
+
+    color-background-1: #f8f8f8,
+    color-background-2: #ffffff,
+    color-background-3: #fbfbfb,
+    color-background-4: #ffffff,
+    color-background-5: #333333,
+    color-background-6: #474747,
+    color-background-7: #f8f8f8,
+    color-background-8: #f8f8f8,
+    color-background-9: #ffffff,
+    color-background-10: #f8f8f8,
+    color-background-11: #242424,
+    color-background-12: #f5f5f5,
+
+    color-background-dark-3: #1a1a1a,
+    color-background-dark-4: #242424,
+
+    color-lines-border: rgba(139, 150, 159, 0.1),
+    color-border-icons: #a1b3b0,
+
+    color-input-background: #fbfbfb,
+    color-input-background-active: rgba(0, 133, 255, 0.08),
+    color-input-background-hover: rgba(0, 133, 255, 0.04),
+    color-input-border: #c4c4c4,
+    color-input-text-color: #000000,
+    color-button-disabled: #d2d2d2,
+    color-button-disabled-2: #bfbfbf,
+    color-button-disabled-3: #bfbfbf,
+
+    color-content-secondary-text: rgba(255,255,255,0.8),
+    color-button-secondary-text: rgba(255,255,255,0.7),
+    color-button-secondary-border: rgba(255, 255, 255, 0.2),
+    color-button-secondary-border-hover: rgba(255, 255, 255, 0.4),
+    color-button-secondary-background: rgba(255, 255, 255, 0.1),
+    color-button-filled-secondary-border: rgba(255, 255, 255, 0.3),
+    color-button-tertiary-disabled-text: #333333,
+
+    color-dark-2: #141414,
+
+    color-button-border: #a7a7a7,
+    color-success: #009d5c,
+    color-notVerifyd: #e5e5e5,
+    color-notVerifyd-bg: #FFFFFF1A,
+    color-notification-error-bg: #ed4b40,
+    color-notification-success: #009d5c,
+    color-message-error-bg: rgba(237, 75, 64, 0.15),
+    color-notification-text: #ffffff,
+    color-chip-disabled: #d2d2d2,
+    color-scrollbar-track: #f8f8f8,
+    color-scrollbar-thumb: #cccccc,
+
+    color-card-border: #eeeeee,
+    //
+    color-stroke: rgba(58, 58, 58, 0.19),
+    color-transparent-1: rgba(255, 255, 255, 0.4),
+    color-transparent-2: rgba(58, 58, 58, 0.19),
+    color-transparent-3: rgba(255, 255, 255, 0.04),
+    color-transparent-4: rgba(255, 255, 255, 0.02),
+    color-transparent-5: rgba(255, 255, 255, 0.06),
+    color-notification-warning: rgba(255, 165, 58, 1),
+    color-notification-warning-bg: rgba(255, 165, 58, 0.15),
+    //
+    // custom colors
+    color-qr-bg: #f8f8f8,
+    color-qr-content: #0a0a0a,
+    color-chart-empty: #f8f8f8,
+    color-drawdown-bg: rgba(58, 255, 78, 0.15),
+    color-drawdown-border: #388240,
+    color-drawdown-duration-bg: #ffa43a,
+    color-checkbox-border: #a7a7a7,
+    // old staff
+    color-text-3: #8b969f,
+    color-text-3-bg: rgba(139, 150, 159, 0.15),
+    color-text-5: #060e13,
+    color-text-6: #2f2f2f,
+    color-text-7: #ffffff,
+    color-text-8: #060e13,
+    color-text-9: #2f2f2f,
+    color-error: #f1554a,
+    color-error-bg: rgba(241, 85, 74, 0.15),
+    color-success-dark-1: #159900,
+    color-success-bg: rgba(80, 171, 85, 0.15),
+    color-tip: #86b7fc,
+    color-tip-bg: rgba(134, 183, 252, 0.1),
+    color-warning: #dda539,
+    color-warning-bg: rgba(221, 165, 57, 0.15),
+    // different in dark theme.
+    color-background-13: #ffffff,
+    color-background-14: #a1b3b0,
+    color-background-15: #f3f5f8,
+    color-background-16: #ffffff,
+    color-background-17: #a1b3b0,
+    color-background-18: #010101,
+    //color element that different from main background colors
+    color-shadow-dropdown: rgba(60, 73, 101, 0.1),
+    color-lines: #f3f4f5,
+    color-lines-1: #d8d8d8,
+    color-select-background: #eef2f6,
+    color-select-background-focused: #f3fcfc,
+    color-empty-icon: #436b67,
+    color-bg-icon-hover: #f3fcfc,
+    color-primary: #1976D2,
+    color-primary-light: rgba(24, 204, 187),
+    color-primary-light-05: rgba(24, 204, 187, 0.05),
+    color-primary-hover: #008f7d,
+    color-primary-pressed: #40b1a3,
+    color-primary-disabled: #3c4241,
+    color-primary-gradient:
+      linear-gradient(92.78deg, #00a091 2.35%, #006d63 103.5%),
+    color-secondary: #78909c,
+    color-secondary-hover: #636d76,
+    color-secondary-pressed: #505a62,
+    color-secondary-disabled: #353c41,
+    color-field-hover: rgba(0, 0, 0, 0.05),
+    color-icon: #a1b3b0,
+    color-radio: #1976D2,
+    // Bot Colors
+    color-action: #a84af1,
+    color-condition: #00c1fe,
+    color-signal: #dbc500,
+
+    //
+    color-success-transparent:rgba(0, 188, 53, 0.1),
+    color-error-transparent: rgba(237, 75, 64, 0.1),
+    color-warning-transparent: rgba(255, 165, 58, 0.1),
+    color-info: #4894FF,
+    color-info-transparent: rgba(72, 148, 255, 0.1),
+  ),
+  "dark": (
+    // amabit design colors
+    color-black: #000000,
+    color-white: #FFFFFF,
+    color-main: #0085ff,
+    color-main-hover: #4187ff,
+    color-main-shadow: rgba(0, 133, 255, 0.4),
+    color-text-gray: #a7a7a7,
+    color-text-dark-gray: #a7a7a7,
+    color-text-dark-gray-1: #5c5c5c,
+    color-text-dark-gray-2: #ffffff,
+    color-text-light-gray: #d2d2d2,
+    color-text-light-gray-2: #d2d2d2,
+    color-text-dark-gray-3: #5c5c5c,
+    color-text-white: #ffffff,
+    color-text-white-1: #ffffff,
+    color-text-white-2: #d2d2d2,
+    color-text-white-3: #a7a7a7,
+
+    // amabit design colors that contains bg should be consistent
+    color-bg-3: #1a1a1a,
+    color-bg-4: #242424,
+    color-bg-5: #141414,
+    color-bg-6: #ccc,
+
+
+    color-background-1: #0a0a0a,
+    color-background-2: #141414,
+    color-background-3: #1a1a1a,
+    color-background-4: #242424,
+    color-background-5: #333333,
+    color-background-6: #474747,
+    color-background-7: #242424,
+    color-background-8: #1a1a1a,
+    color-background-9: #1a1a1a,
+    color-background-10: #141414,
+    color-background-11: #474747,
+    color-background-12: #141414,
+
+    color-background-dark-3: #1a1a1a,
+    color-background-dark-4: #242424,
+
+    color-text-1: #ffffff,
+    color-text-2: #dbdbdb,
+    color-text-4: #7d8594,
+
+    color-dark-2: #141414,
+
+    color-success: #009d5c,
+    color-notification-success: #009D5C,
+    color-notVerifyd: #e5e5e5,
+    color-notVerifyd-bg: #FFFFFF1A,
+    color-notification-error-bg: #ed4b40,
+    color-message-error-bg: rgba(237, 75, 64, 0.15),
+    color-notification-text: #ffffff,
+    color-button-disabled: #4a4a4c,
+    color-button-disabled-2: #333333,
+    color-button-disabled-3: #333333,
+    color-button-border: #1a1a1a,
+
+    color-content-secondary-text: rgba(255,255,255,0.8),
+    color-button-secondary-text: rgba(255,255,255,0.7),
+    color-button-secondary-border: rgba(255, 255, 255, 0.2),
+    color-button-secondary-border-hover: rgba(255, 255, 255, 0.4),
+    color-button-secondary-background: rgba(255, 255, 255, 0.1),
+    color-button-filled-secondary-border: rgba(255, 255, 255, 0.3),
+    color-button-tertiary-disabled-text: #333333,
+
+    color-input-background: #161616,
+    color-input-background-active: rgba(0, 133, 255, 0.08),
+    color-input-background-hover: rgba(0, 133, 255, 0.04),
+    color-input-border: #242424,
+    color-input-text-color: #dbdbdb,
+    color-lines-border: rgba(139, 150, 159, 0.1),
+    color-border-icons: #a1b3b0,
+
+    color-stroke: rgba(139, 150, 159, 0.1),
+    color-transparent-1: rgba(255, 255, 255, 0.4),
+    color-transparent-2: rgba(255, 255, 255, 0.2),
+    color-transparent-3: rgba(255, 255, 255, 0.04),
+    color-transparent-4: rgba(255, 255, 255, 0.02),
+    color-transparent-5: rgba(255, 255, 255, 0.06),
+    color-notification-warning: rgba(255, 165, 58, 1),
+    color-notification-warning-bg: rgba(255, 165, 58, 0.15),
+    color-chip-disabled: #292929,
+
+    color-scrollbar-track: #242424,
+    color-scrollbar-thumb: #333333,
+
+    color-card-border: #141414,
+    // end of amabit design colors
+    //
+    // custom colors
+    color-qr-bg: #f8f8f8,
+    color-qr-content: #0a0a0a,
+    color-chart-empty: #242424,
+    color-drawdown-bg: rgba(58, 255, 78, 0.15),
+    color-drawdown-border: #388240,
+    color-drawdown-duration-bg: #ffa43a,
+    color-checkbox-border: #384745,
+
+    //
+    // colors from design
+    color-text-3: #8b969f,
+    color-text-3-bg: rgba(139, 150, 159, 0.15),
+    color-text-5: #ffffff,
+    color-text-6: #8b969f,
+    color-text-7: #ffffff,
+    color-text-8: #d2d2d2,
+    color-text-9: #d2d2d2,
+    color-error: #f1554a,
+    color-error-bg: rgba(241, 85, 74, 0.15),
+    color-success-dark-1: #159900,
+    color-success-bg: rgba(80, 171, 85, 0.15),
+    color-tip: #86b7fc,
+    color-tip-bg: rgba(134, 183, 252, 0.1),
+    color-warning: #dda539,
+    color-warning-bg: rgba(221, 165, 57, 0.15),
+    color-background-13: #060e13,
+    color-background-14: #2e383e,
+    color-background-15: #0f2321,
+    color-background-16: #1e3735,
+    color-background-17: #395d58,
+    //color element that different from main background colors
+    color-shadow-dropdown: rgba(60, 73, 101, 0.1),
+    color-lines: #1c272f,
+    color-lines-1: #4d5155,
+    color-select-background: #16232c,
+    color-select-background-focused: #101c24,
+    color-empty-icon: #436b67,
+    color-bg-icon-hover: #0f242b,
+    color-primary: #1976D2,
+    color-primary-light: rgba(24, 204, 187),
+    color-primary-light-05: rgba(24, 204, 187, 0.05),
+    color-primary-hover: #008f7d,
+    color-primary-pressed: #40b1a3,
+    color-primary-disabled: #3c4241,
+    color-primary-gradient:
+      linear-gradient(92.78deg, #00a091 2.35%, #006d63 103.5%),
+    color-secondary: #78909c,
+    color-secondary-hover: #636d76,
+    color-secondary-pressed: #505a62,
+    color-secondary-disabled: #353c41,
+    color-field-hover: rgba(255, 255, 255, 0.07),
+    color-icon: #a1b3b0,
+    color-radio: #1976D2,
+
+    // Bot Colors
+    color-action: #a84af1,
+    color-condition: #00c1fe,
+    color-signal: #dbc500,
+
+    //
+    color-success-transparent:rgba(0, 188, 53, 0.1),
+    color-error-transparent: rgba(237, 75, 64, 0.1),
+    color-warning-transparent: rgba(255, 165, 58, 0.1),
+    color-info: #4894FF,
+    color-info-transparent: rgba(72, 148, 255, 0.1),
+  ),
+);
+
+@each $theme, $colors in $themes {
+  .body--#{$theme} {
+    @each $name, $color in $colors {
+      .bg-#{$name} {
+        background: $color;
+      }
+      .text-#{$name} {
+        color: $color;
+      }
+    }
+
+    .screenwide {
+      max-width: 100%;
+    }
+
+    .q-field__control {
+      color: map.get($colors, color-text-5) !important;
+      background-color: inherit;
+    }
+
+    .q-separator {
+      background: map.get($colors, color-lines-border);
+    }
+
+    .q-item {
+      color: var(--color-text-3);
+
+      &--dense {
+        padding-left: 12px;
+        padding-right: 12px;
+      }
+
+      &:hover {
+        background-color: map.get($colors, color-background-3);
+      }
+    }
+
+    .q-menu {
+      box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+    }
+  }
+}
+
+@each $theme, $colors in $themes {
+  .body--#{$theme} {
+    @each $name, $color in $colors {
+      --#{$name}: #{$color};
+    }
+  }
+}
+
+.q-dark {
+  color: var(--color-text-5);
+  background: var(--color-background-1);
+}

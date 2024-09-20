@@ -1,6 +1,34 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  compatibilityDate: '2024-04-03',
   devtools: { enabled: true },
-  modules: ['nuxt-quasar-ui']
-})
+  css: [
+    "~/assets/styles/main.scss",
+    "~/assets/styles/themes.scss",
+  ],
+  modules: ["nuxt-quasar-ui", "@nuxt/image"],
+  runtimeConfig: {
+    public: {
+      BASE_URL: process.env.BASE_URL,
+    },
+  },
+  routeRules: {
+    "/": { prerender: true },
+  },
+  build: {
+    transpile: ["quasar"],
+  },
+  typescript: {
+    tsConfig: {
+      compilerOptions: {
+        verbatimModuleSyntax: false,
+      },
+    },
+  },
+  quasar: {
+    sassVariables: "~/assets/styles/quasar.variables.scss",
+    plugins: ["Notify", "Dialog"],
+    extras: {
+      fontIcons: ["material-icons"],
+    },
+  },
+});

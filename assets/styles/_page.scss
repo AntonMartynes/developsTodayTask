@@ -1,0 +1,52 @@
+@import "assets/styles/themes.scss";
+
+.q-page {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  min-height: calc(100vh - 83px);
+  max-width: 1400px;
+}
+
+.min-hidden-sm {
+  @media (min-width: $breakpoint-sm) {
+    display: none;
+  }
+}
+
+.hidden-sm {
+  @media (max-width: $breakpoint-sm) {
+    display: none;
+  }
+}
+
+.w-sm-full {
+  @media (max-width: $breakpoint-sm) {
+    width: 100%!important;
+  }
+}
+
+.gap-1 {
+  gap: 15px;
+}
+
+.gap-2 {
+  gap: 32px;
+}
+
+.gap-sm-1 {
+  @media (max-width: $breakpoint-sm) {
+    gap: 15px;
+  }
+}
+
+.flex-row {
+  display: flex;
+}
+
+.section-padding-vertical {
+  padding: 134px 0;
+  @media (max-width: $breakpoint-xs) {
+    padding: 64px 0;
+  }
+}

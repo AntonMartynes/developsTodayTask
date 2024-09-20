@@ -9,9 +9,28 @@
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare"
   },
+  "devDependencies": {
+    "@babel/core": "^7.21.4",
+    "@babel/eslint-parser": "^7.21.3",
+    "@mdi/font": "^7.1.96",
+    "@quasar/vite-plugin": "^1.6.0",
+    "@rushstack/eslint-patch": "^1.2.0",
+    "@vue/eslint-config-prettier": "^7.1.0",
+    "eslint": "^9.9.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-prettier": "^5.2.1",
+    "eslint-plugin-vue": "^9.27.0",
+    "nuxt-quasar-ui": "^2.0.8",
+    "prettier": "^3.3.3",
+    "sass": "^1.75.0"
+  },
   "dependencies": {
+    "@nuxt/image": "^1.7.0",
+    "@quasar/extras": "^1.16.11",
+    "axios": "^1.7.7",
     "nuxt": "^3.13.0",
     "nuxt-quasar-ui": "^2.1.6",
+    "quasar": "^2.15.3",
     "vue": "latest",
     "vue-router": "latest"
   }
